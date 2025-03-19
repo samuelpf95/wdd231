@@ -78,27 +78,46 @@ const courses = [
     }
 ]
 document.addEventListener("DOMContentLoaded", () => {
-    const courseButtons = document.querySelectorAll(".button-grid .buttonr");
-    const filterButtons = document.querySelectorAll(".button-row .button");
+    const coursebs = document.querySelectorAll(".button-grid .buttonr");
+    const filters = document.querySelectorAll(".button-row .button");
+    const creditsd = document.getElementById("tc");
 
-    courseButtons.forEach(button => {
-        const courseId = button.id.split(" ")[1];
-        const course = courses.find(c => c.number == courseId);
+    coursebs.forEach(button => {
+        const courseId = button.id;
+        const [subject, number] = courseId.split("_");
+        const course = courses.find(c => c.subject === subject && c.number === parseInt(number));
 
         if (course?.completed) {
-            button.style.backgroundColor = "#008000";
+            button.style.backgroundColor = "green";
         }
     });
 
-    filterButtons.forEach(filterButton => {
-        filterButton.addEventListener("click", () => {
-            const category = filterButton.innerText;
+    function updateCreditsSum() {
+        const filteredc = Array.from(coursebs)
+            .filter(button => button.style.display !== "none")
+            .map(button => {
+                const [subject, number] = button.id.split("_");
+                return courses.find(c => c.subject === subject && c.number === parseInt(number));
+            })
+            .filter(course => course?.completed)
+            .reduce((sum, course) => sum + course.credits, 0);
 
-            courseButtons.forEach(button => {
-                const courseId = button.id.split(" ")[0];
+        creditsd.textContent = `Total of credits: ${filteredc}`;
+    }
 
-                button.style.display = (category === "All" || courseId === category) ? "inline-block" : "none";
+    filters.forEach(filter => {
+        filter.addEventListener("click", () => {
+            const category = filter.innerText;
+
+            coursebs.forEach(button => {
+                const [subject, number] = button.id.split("_");
+                const isMatchingCategory = category === "All" || category === subject;
+                button.style.display = isMatchingCategory ? "inline-block" : "none";
             });
+
+            updateCreditsSum();
         });
     });
+
+    updateCreditsSum();
 });

@@ -218,3 +218,9 @@ footer img{
 .opened{
     display: flex;
 }
+#tc{
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    margin-top: .5rem;
+}
