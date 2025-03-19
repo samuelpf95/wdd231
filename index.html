@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Molengo&display=swap" rel="stylesheet">
+    <title>Index</title>
+</head>
+
+<body>
+    <header>
+        <img class="ppicture" src="images/profile.webp" alt="Profile picture">
+        <span>Samuel Pacheco</span>
+        <button class="hamburger" id="open"><i class="bi bi-list"></i></button>
+    </header>
+    <div>
+        <nav class="closed" id="menu">
+            <button class="hamburger" id="close"><i class="bi bi-list"></i></button>
+            <ul class="list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="https://github.com/samuelpf95/">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/samuel-pacheco-49a906316/">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <main class="iflex">
+            <h1>Home</h1>
+            <section class="s1">
+                <h2>Course Work</h2>
+                <ul class="courses">
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                </ul>
+            </section>
+            <section class="s2">
+                <h2>Toloria, Madagascar</h2>
+                <img src="images/toloria.webp" alt="Toloria, Madagascar">
+                <p>Baobab Tree</p>
+            </section>
+        </main>
+        <section class="s3">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="button-row">
+                <button class="button">All</button>
+                <button class="button">CSE</button>
+                <button class="button">WDD</button>
+            </div>
+            <hr class="divider">
+            <div class="button-grid">
+                <button class="buttonr" id="CSE 110">CSE 110</button>
+                <button class="buttonr" id="WDD 130">WDD 130</button>
+                <button class="buttonr" id="CSE 111">CSE 111</button>
+                <button class="buttonr" id="CSE 210">CSE 210</button>
+                <button class="buttonr" id="WDD 131">WDD 131</button>
+                <button class="buttonr" id="WDD 231">WDD 231</button>
+            </div>
+        </section>
+    </div>
+    <footer class="foot">
+        <p class>
+            &copy; <span id="currentyear"></span>
+            Samuel Pacheco, México
+            <img src="images/flag.webp" alt="Mexico flag">
+        </p>
+        <p id="lastModified">
+        </p>
+    </footer>
+</body>
+</html>
