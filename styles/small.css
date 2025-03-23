@@ -49,7 +49,9 @@ nav {
 .courses {
     margin-top: 1rem;
 }
-
+section{
+    background-color: var(--accent1-color);
+}
 nav a:hover {
 	border: 1px solid var(--accent2-color);
 }
