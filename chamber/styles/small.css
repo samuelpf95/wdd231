@@ -1,0 +1,236 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: "Molengo", serif;
+}
+h1{
+    margin: .5rem 0;
+    font-size: 2rem;
+    margin-left: 5%;
+}
+body{
+    background-color: var(--secondary-color);
+}
+.molengo-regular {
+    font-family: "Molengo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+main{
+    color: var(--accent2-color);
+}
+
+header{
+    display: grid;
+    grid-template-columns:1fr .5fr 1fr;
+    grid-template-rows: auto;
+    background-color: var(--primary-color);
+    max-width: 100%;
+    width: 100%;
+    justify-self: center;
+}
+header img{
+    max-width: 5rem;
+    height: auto;
+    grid-row: 1/-1;
+    margin-left: auto;
+}
+#half span::before{
+    content: "\263E";
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+#half{
+    background-color: transparent;
+    width: 45px;
+    height: 45px;
+    padding-bottom: 1rem;
+}
+#chamber{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+#chamber p{
+    align-content: baseline;
+}
+#gate{
+    margin-top: auto;
+    font-size: 2.5rem;
+}
+#subgate{
+    font-size: 1rem;
+}
+#menu{
+    grid-column: 3;
+    width: 100%;
+    background-color: black;
+    align-items: end;
+}
+#menu nav ul {
+    list-style-type: none;
+}
+
+#menu nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    display: block;
+    padding: 1rem 0 1rem 1rem;
+}
+
+#menu nav ul li a:hover {
+    background-color: var(--accent2-color);
+    display: block;
+}
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+}
+.hero img{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+#ktb{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+
+}
+.sections{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    max-width: 90%;
+    margin-left: 5%;
+    gap: 1rem;
+}
+.sections h2{
+    background-color: var(--primary-color);
+    width: 100%;
+    margin: auto;
+    padding-left: 1rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.sect{
+    max-width: 800px;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--accent2-color);
+    box-shadow: 10px 5px 15px #000000ab;
+    border-radius: 15px;
+}
+.events{
+    list-style: none;
+}
+footer {
+	background-color:var(--primary-color);
+    color: var(--accent-color);
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+    align-items: center;
+    font-size: 1rem;
+    gap: 2rem;
+}
+footer a img{
+    max-width: 3rem;
+    height: auto;
+    margin: 1rem;
+}
+.foot{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+ }
+.cards {
+	margin-left: 1rem;
+}
+.grid{
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+	grid-gap: 1rem;
+}
+#hamburger span::before{
+    content: "\2630";
+    font-size: 2rem;
+}
+#hamburger.open span::before{
+    content: "X";
+}
+#hamburger{
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 2%;
+    left: 80%;
+}
+#hamburger:hover{
+    cursor: pointer;
+    background-color: rgb(223, 223, 223);
+    border-radius: 15px;
+}
+nav{
+    display: grid;
+    grid-template-rows: 0fr;
+    gap: 1rem;
+    transition: grid-template-rows 0.5 ease-out;
+}
+nav ul{
+    overflow: hidden;
+}
+nav.open{
+    grid-template-rows: 1fr;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+    margin: auto;
+    max-width: 90%;
+}
+section.cards{
+    margin: unset;
+    padding: 0;
+}
+.list{
+    display: flex;
+	flex-direction: column;
+}
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list section {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	margin: 0;
+	padding: 0.25rem;
+}
+
+.list section > * {
+	margin: 0 1rem;
+}
+
+.list section img {
+	display: none; /* smaller viewports only */
+}
+
+.list section h3 {
+	font-size: 1rem;
+	font-family: Roboto, Helvetica, sans-serif;
+}
+
+.list section:nth-child(even) {
+	background-color: var(--secondary-color);
+}

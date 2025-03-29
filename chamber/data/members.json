@@ -1,0 +1,67 @@
+{
+    "members": [
+        {
+            "name": "Tech Innovations",
+            "address": "123 Silicon Valley, California, USA",
+            "phone": "(123) 456-7890",
+            "website": "https://www.techinnovations.com",
+            "image": "https://example.com/images/tech_innovations_logo.png",
+            "membership_level": 3,
+            "country": "USA"
+        },
+        {
+            "name": "GreenEarth Solutions",
+            "address": "456 Green Street, Denver, Colorado, USA",
+            "phone": "(987) 654-3210",
+            "website": "https://www.greenearthsolutions.com",
+            "image": "https://example.com/images/greenearth_logo.png",
+            "membership_level": 2,
+            "country": "USA"
+        },
+        {
+            "name": "Global Enterprises",
+            "address": "789 Global Way, London, UK",
+            "phone": "(44) 20 7946 0958",
+            "website": "https://www.globalenterprises.com",
+            "image": "https://example.com/images/globalenterprises_logo.png",
+            "membership_level": 1,
+            "country": "UK"
+        },
+        {
+            "name": "Eclipse Innovations",
+            "address": "321 Eclipse Boulevard, New York, USA",
+            "phone": "(212) 555-6789",
+            "website": "https://www.eclipseinnovations.com",
+            "image": "https://example.com/images/eclipse_innovations_icon.png",
+            "membership_level": 2,
+            "country": "USA"
+        },
+        {
+            "name": "Digital Horizons",
+            "address": "123 Digital Avenue, Toronto, Canada",
+            "phone": "(416) 555-1234",
+            "website": "https://www.digitalhorizons.com",
+            "image": "https://example.com/images/digitalhorizons_logo.png",
+            "membership_level": 1,
+            "country": "Canada"
+        },
+        {
+            "name": "Fresh Foods Co.",
+            "address": "500 Organic Plaza, Austin, Texas, USA",
+            "phone": "(512) 555-2345",
+            "website": "https://www.freshfoodsco.com",
+            "image": "https://example.com/images/freshfoods_logo.png",
+            "membership_level": 3,
+            "country": "USA"
+        },
+        {
+            "name": "SolarTech Systems",
+            "address": "200 Solar Drive, Phoenix, Arizona, USA",
+            "phone": "(602) 555-6789",
+            "website": "https://www.solartechsystems.com",
+            "image": "https://example.com/images/solartech_logo.png",
+            "membership_level": 2,
+            "country": "USA"
+        }
+    ]
+}

@@ -1,13 +1,9 @@
-const menu = document.querySelector("#menu");
+const menu = document.querySelector("#ani");
 const opened = document.querySelector("#open");
-const closed = document.querySelector("#close");
+
 
 opened.addEventListener("click", () =>{
-    menu.classList.remove("closed");
-    menu.classList.add("opened");
+    menu.classList.toggle("closed");
+    open.classList.toggle("closedb")
 });
 
-closed.addEventListener("click", () =>{
-    menu.classList.add("closed");
-    menu.classList.remove("opened");
-});

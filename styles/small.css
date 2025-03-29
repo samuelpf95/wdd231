@@ -146,15 +146,27 @@ button:hover {
     button{
         margin: 0 .5rem;
     }
+    .closed{
+        display: none;
+    }
     #menu{
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
         align-items: end;
         position: absolute;
-        top: 0;
+        top: 9rem;
         right: 0;
         bottom: 0;
-        width: 50%;
+        width: 52%;
         background-color: var(--accent2-color);
+        align-content: space-between;
+        transition: template-grid-columns 0.5 ease-out;
+    }
+    #menu ul{
+        overflow: hidden;
+    }
+    #menu.closed{
+        grid-template-columns: 0fr;
     }
     #menu .hamburger{
         
@@ -200,6 +212,10 @@ button:hover {
     border-radius: 2px;
     margin-left: 0rem;
     margin-right: .2rem;
+    height: 2rem;
+}
+.hamburger img{
+    max-width: 2rem;
 }
 footer {
 	background-color:var(--accent2-color);
@@ -215,10 +231,18 @@ footer img{
     height: auto;
 }
 .closed{
-    display: none;
+    overflow: hidden;
 }
-.opened{
-    display: flex;
+.closedb{
+    content: "X";
+}
+.hamburger span::before {
+    content: "☰";
+    font-size: 2rem;
+}
+
+.hamburger.closedb span::before {
+    content: "✖";
 }
 #tc{
     display: flex;
