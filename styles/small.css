@@ -160,7 +160,7 @@ button:hover {
         width: 52%;
         background-color: var(--accent2-color);
         align-content: space-between;
-        transition: template-grid-columns 0.5 ease-out;
+        /*transition: template-grid-columns 0.5 ease-out; Couldn't make it work*/
     }
     #menu ul{
         overflow: hidden;
