@@ -234,3 +234,6 @@ section.cards{
 .list section:nth-child(even) {
 	background-color: var(--secondary-color);
 }
+#half{
+    
+}
