@@ -217,6 +217,7 @@ button:hover {
 .hamburger img{
     max-width: 2rem;
 }
+
 footer {
 	background-color:var(--accent2-color);
     color: var(--accent1-color);

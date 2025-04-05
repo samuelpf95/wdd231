@@ -4,6 +4,6 @@ const opened = document.querySelector("#open");
 
 opened.addEventListener("click", () =>{
     menu.classList.toggle("closed");
-    open.classList.toggle("closedb")
+    opened.classList.toggle("closedb")
 });
 

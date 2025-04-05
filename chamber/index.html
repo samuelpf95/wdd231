@@ -4,28 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chamber Directory Page">
+    <meta name="description" content="Chamber Home Page">
     <meta name="author" content="Samuel Pacheco">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/cards.js" defer></script>
-    <script src="scripts/weather.js" defer></script>    
+    <script src="scripts/spotlight.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Molengo&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.ico">
-    <meta property="og:title" content="Chamber Directory Page | Samuel Pacheco" />
+    <meta property="og:title" content="Chamber Home Page | Samuel Pacheco" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://samuelpf95.github.io/wdd231/chamber/images/hero_image.webp" />
     <meta property="og:url" content="https://samuelpf95.github.io/wdd231/chamber/directory.html" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Chamber Directory Page | Samuel Pacheco" />
-    <meta name="twitter:description" content="Chamber Directory Page of WDD 231 course by Samuel Pacheco" />
+    <meta name="twitter:title" content="Chamber Home Page | Samuel Pacheco" />
+    <meta name="twitter:description" content="Chamber Home Page of WDD 231 course by Samuel Pacheco" />
     <meta name="twitter:image" content="https://samuelpf95.github.io/wdd231/images/cdmx.webp" />
-    <title>Chamber Directory Page | Samuel Pacheco | wdd 231</title>
+    <title>Chamber Home Page | Samuel Pacheco | wdd 231</title>
 </head>
 
     <body>
@@ -42,7 +42,7 @@
                     <button id="half"><span></span></button>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Directory</a></li>
+                        <li><a href="https://samuelpf95.github.io/wdd231/chamber/directory.html">Directory</a></li>
                         <li><a href="#">Join</a></li>
                         <li><a href="#">Discover</a></li>
                     </ul>
@@ -50,10 +50,11 @@
             </div>
         <main class="iflex">
             <div class="hero">
-                <img src="images/hero_image.webp" alt="hero image">
+                <img src="images/hero_image_home.webp" alt="hero image">
                 <button id="ktb">Keynote Tickets</button>
             </div>
             <h1>Home</h1>
+            <button id="cta">Join to the Gate Chamber</button>
             <div class="sections">
                 <section class="sect" id="s1">
                     <h2>Events</h2>
@@ -70,10 +71,11 @@
                         <img id="weather-icon" src="" alt="">
                         <figcaption></figcaption>
                     </figure>
+                    <div id="forecast"></div>   
                 </section>
                 <section class="sect" id="s3">
-                    <h2>Weather Forecast</h2>
-                    <div id="forecast"></div>   
+                    <h2>Spotlights</h2>
+                    <div id="member-list"></div>
                 </section>
             </div>
             <div id="listt" class="cards grid">
