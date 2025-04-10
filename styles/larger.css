@@ -20,6 +20,11 @@
         padding: 1rem;
         text-decoration: none;
     }
+    nav, nav.close{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+    }
     .iflex{
         gap: 1rem;
     }

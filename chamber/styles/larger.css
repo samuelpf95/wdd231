@@ -12,11 +12,12 @@
     #animate{
         margin: auto;
     }
-    nav{
+    nav, nav.close{
         display: flex;
         flex-wrap: wrap;
         flex-direction: row-reverse;
     }
+    
     #menu{
         max-width: 90%;
     }
@@ -66,5 +67,44 @@
     }
     .list{
 
+    }
+    .mainform fieldset{
+        display: grid;
+        justify-items: start;
+        border-radius: 15px;
+        max-width: 80%;    
+    }
+    .MainJoin{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 8fr;
+    }
+    .MainJoin *{
+        margin: 0;
+    }
+    .MainJoin label{
+        display: block;
+    }
+    .MainJoin h1{
+        grid-column:-1/1;
+        padding-top: .5rem;
+    }
+    .MainJoin h2{
+        display: flex;
+        justify-content: center;
+    }
+    .MainJoin h3{
+        padding-top: .5rem;
+    }
+    .MainJoin fieldset label{
+        padding-top: .5rem;
+    }
+    .MainJoin input[type="text"], .MainJoin input[type="tel"],.MainJoin input[type="email"], .MainJoin fieldset label{
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    .MainJoin dialog{
+        margin: auto;
     }
 }

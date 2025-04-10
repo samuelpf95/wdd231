@@ -7,6 +7,8 @@ const list = document.querySelector("#half")
 opened.addEventListener("click", () =>{
     menu.classList.toggle("open");
     opened.classList.toggle("open");
+    menu.classList.toggle("close");
+
 });
 list.addEventListener("click", () =>{
     listed.classList.toggle("list")

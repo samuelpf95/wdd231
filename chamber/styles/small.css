@@ -9,8 +9,8 @@ h1{
     font-size: 2rem;
     margin-left: 5%;
 }
-body{
-    background-color: var(--secondary-color);
+body {
+    background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
 }
 .molengo-regular {
     font-family: "Molengo", serif;
@@ -83,6 +83,9 @@ header img{
     background-color: var(--accent2-color);
     display: block;
 }
+a{
+    margin: unset;
+}
 .hero{
     display: flex;
     justify-content: center;
@@ -95,19 +98,22 @@ header img{
     height: auto;
     margin: auto;
 }
-#ktb{
+#ktb, #cta{
     position: absolute;
     bottom: 10%;
     left: 50%;
 
 }
+#ktb{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
 .sect *{
     padding: .2rem;
 }
 #cta{
-    display: flex;
     padding: 1rem;
-    margin: 1rem auto;
     background-color: black;
     color: white;
     border-radius: 2rem;
@@ -201,9 +207,14 @@ nav{
 nav ul{
     overflow: hidden;
 }
-
+#listt *{
+    margin: unset;
+}
 nav.open{
     grid-template-rows: 1fr;
+}
+nav.close{
+    display: none;
 }
 .cards{
     display: grid;
@@ -213,9 +224,21 @@ nav.open{
     margin: auto;
     max-width: 90%;
 }
-section.cards{
-    margin: unset;
-    padding: 0;
+#listt div{
+    border: 0.2px solid rgba(0, 0, 0, 0.541);
+    background-color: rgba(255, 255, 255, 0.404);
+    border-bottom-right-radius: 15%;
+    box-shadow: 10px 10px 5px #00043b6b;
+}
+#listt h2, #listt img{
+    display: block;
+    background-color: var(--primary-color);
+    padding: .2rem .5rem;
+
+}
+#listt p{
+    padding: .2rem .5rem;
+    color: var(--accent1-color);
 }
 .list{
     display: flex;
@@ -249,6 +272,117 @@ section.cards{
 .list section:nth-child(even) {
 	background-color: var(--secondary-color);
 }
-#half{
-    
+/*Join*/
+.MainJoin{
+    margin: auto;
+    max-width: 90%;
 }
+#regj, .MainJoin h2{
+    margin: auto;
+    padding: 1rem 0;
+}
+.mainform label input{
+    margin-bottom: .5rem;
+}
+.mainform fieldset{
+    display: grid;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+.rinp{
+    padding: .5rem 0;
+    display: block;
+}
+.mainform textarea{
+    width: 100%;
+    min-height: 80px;
+}
+#submit{
+    padding: .5rem;
+    background-color: rgb(212, 212, 212);
+    color: rgb(0, 0, 0);
+    border-radius: 2rem;
+    border-color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+.details section{
+    border: 1px solid black;
+    padding: 1rem .5rem;
+    margin: 1rem auto;
+    border-radius: 0px 15px;
+    box-shadow: -5px -10px 12px 0px #00000070;
+}
+.details section h4{
+    text-decoration: underline;
+}
+.details section *{
+    color: black;
+    margin: auto;
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: center;
+}
+.details section button{
+    margin: 1rem auto .5rem auto;
+    padding: 0 1rem;
+    border-radius: 15px;
+    border-color: rgb(49, 49, 49);
+    background-color: white;
+}
+#m0{
+    background-color: white;
+}
+#m1 {
+    background: linear-gradient(45deg, #9c4b1f 0%, #cd7f32 70%, #b5651d 100%);
+    filter: brightness(1.2);
+}
+#m1 h4{
+    color: white;
+}
+
+#m2 {
+    background: linear-gradient(45deg, #8b8b8b 0%, #C0C0C0 70%, #A8A8A8 100%);
+    filter: brightness(1.1);
+}
+
+#m3 {
+    background: linear-gradient(45deg, #FF9B00 0%, #FFD700 70%, #FFB800 100%);
+    filter: brightness(1.3);
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+dialog {
+  margin: auto;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #00000055;
+  max-width: 400px;
+  background-color: white;
+}
+@keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .details {
+    opacity: 0;
+    animation: fadeSlideIn 1s ease-out both;
+  }
+.details section {
+  transform: translateY(30px);
+  animation:alternate 0.8s ease-out forwards;
+}
+
+#m0 { animation-delay: 0.1s; }
+#m1 { animation-delay: 0.3s; }
+#m2 { animation-delay: 0.5s; }
+#m3 { animation-delay: 0.7s; }
