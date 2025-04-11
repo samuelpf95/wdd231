@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/registration.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Molengo&display=swap" rel="stylesheet">
@@ -26,6 +25,25 @@
     <title>Chamber Join Page | Samuel Pacheco | wdd 231</title>
 </head>
 <body>
+    <header>
+        <div id="chamber">
+            <img src="images/logo.webp" alt="logo">
+            <p id="gate">Gate</p>
+            <p id="subgate">Chamber of Commerce</p>
+            <button id="hamburger"><span></span></button>
+        </div>
+    </header>
+        <div id="menu">
+            <nav id="animate" class="close">
+                <button id="half"><span></span></button>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="https://samuelpf95.github.io/wdd231/chamber/directory.html">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
     <main>
         <h1>Thank you for registering!</h1>
         <div id="results"></div>
@@ -59,3 +77,4 @@
 </footer>
 </body>
 </html>
+<script src="scripts/data.js"></script>

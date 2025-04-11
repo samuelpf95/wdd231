@@ -386,3 +386,15 @@ dialog {
 #m1 { animation-delay: 0.3s; }
 #m2 { animation-delay: 0.5s; }
 #m3 { animation-delay: 0.7s; }
+#results {
+    background-color: rgba(0, 0, 0, 0.103);
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    width: 80%;
+    max-width: 600px;
+    margin: 2rem auto;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}

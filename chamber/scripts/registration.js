@@ -26,12 +26,4 @@
   closeBtn.addEventListener("click", () => {
     dialog.close();
   });
-  const params = new URLSearchParams(window.location.search);
-  const results = document.querySelector("#results");
-
-  for (const key in fields) {
-    const value = params.get(key) || "Not provided";
-    const p = document.createElement("p");
-    p.innerHTML = `<strong>${fields[key]}:</strong> ${value}`;
-    results.appendChild(p);
-  }
+ 
