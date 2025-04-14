@@ -107,4 +107,40 @@
     .MainJoin dialog{
         margin: auto;
     }
+    #splace{
+        grid-template-areas: 
+        "pic name"
+        "pic description"
+        "pic address"
+        "button button";
+    }
+    #splace figure{
+        min-width: 150px;
+        height: auto;
+        margin: auto;
+    }
+    #avm{
+        max-width: unset;
+    }
+    #vm{
+        display: grid;
+        justify-items: end;
+    }
+    @media (min-width: 1025px) {
+        #splace{
+            grid-template-areas: 
+            "name name"
+            "pic description"
+            "pic address"
+            "button button";
+        }
+        #splace figure{
+            margin-left: 1rem;
+        }
+        .pcards{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 95%;
+        }
+    }
 }
