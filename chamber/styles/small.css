@@ -127,6 +127,9 @@ a{
     margin-left: 5%;
     gap: 1rem;
 }
+#menu nav ul li a:focus{
+    border: 2px solid white;
+}
 .sections h2{
     background-color: var(--primary-color);
     width: 100%;
