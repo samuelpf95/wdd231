@@ -1,0 +1,40 @@
+@media (min-width: 320px){
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        list-style: none;
+        max-width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+    nav ul li a{
+        display: inline;
+        text-decoration: none;
+        color: white;
+        background-color: rgb(20, 20, 20);
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        border: 1px solid rgb(17, 17, 17);
+    }
+    #wfs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    footer{
+        background-color: aliceblue;
+        color: black;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        padding-bottom: 2rem;
+        margin-top: 2rem;
+        box-shadow: 0 0 10px 0 white;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        align-items: center;
+        font-size: 1.5rem;
+        gap: 2rem;
+    }
+    
+}
