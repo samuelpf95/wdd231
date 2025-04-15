@@ -98,7 +98,7 @@ a{
     height: auto;
     margin: auto;
 }
-#ktb, #cta{
+#cta{
     position: absolute;
     bottom: 10%;
     left: 50%;
@@ -244,11 +244,6 @@ nav.close{
     display: flex;
 	flex-direction: column;
 }
-.list {
-	display: flex;
-	flex-direction: column;
-}
-
 .list section {
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr;
@@ -446,7 +441,6 @@ dialog {
     box-shadow: 0 0 2px 0px rgb(58, 205, 241);
     display: grid;
     max-width: 90%;
-    margin: 1rem auto;
     grid-template-areas: 
     "pic"
     "name"
