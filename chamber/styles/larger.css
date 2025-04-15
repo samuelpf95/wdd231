@@ -65,9 +65,6 @@
     div.cards section {
         margin: 0;
     }
-    .list{
-
-    }
     .mainform fieldset{
         display: grid;
         justify-items: start;
