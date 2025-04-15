@@ -1,4 +1,7 @@
-import { places } from "../data/places.mjs";
+fetch("data/places.json")
+	.then((res) => res.json())
+	.then((data) => displayPlaces(data))
+	.catch((err) => console.error("Error loading places:", err));
 
 const displayPlaces = (places) => {
 	const cards = document.querySelector("div.pcards");

@@ -437,6 +437,7 @@ dialog {
 }
 .pcards{
     padding: 1rem 0;
+    justify-items: center;
 }
 #splace{
     margin: 1rem 8px;

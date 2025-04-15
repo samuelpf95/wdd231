@@ -1,4 +1,4 @@
-export const places = [
+[
     {
       "name": "National Museum of Anthropology",
       "cost": "$95 MXN",
