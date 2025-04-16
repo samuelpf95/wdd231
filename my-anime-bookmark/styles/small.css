@@ -1,0 +1,286 @@
+*{
+    max-width: 98%;
+    margin: auto;
+    font-style: normal;
+    font-family: "Josefin Sans", sans-serif;
+}
+header{
+    background-color: aliceblue;
+    color: black;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: .5rem 0    ;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 10px 0 white;
+}
+#hamburger span::before{
+    content: "\2630";
+    font-size: 2rem;
+}
+#hamburger.open span::before{
+    content: "X";
+}
+#hamburger{
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 2%;
+    left: 80%;
+}
+#hamburger:hover{
+    cursor: pointer;
+    background-color: rgb(223, 223, 223);
+    border-radius: 15px;
+}
+.alink{
+    background-color: rgb(61, 61, 61);
+}
+.upper{
+    display: flex;
+    width: 100%;
+    grid-template-columns: 2fr 3fr;
+    justify-content: center;
+}
+.upper *{
+    margin: 0;
+}
+.upper p{
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+.upper img{
+    width: 5rem;
+    height: auto;
+    border-right: 1px solid black;
+    padding-right: .5rem;
+}
+body{    
+    background:radial-gradient(circle, rgb(0, 0, 0), rgb(0, 0, 0), black, rgb(0, 0, 0), rgb(0, 0, 0), rgb(7, 7, 7), rgb(29, 23, 23));
+    color: white;
+}
+nav{
+    background-color: rgb(34, 34, 34);
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+h1, h2, h3, h4{
+    padding: 1rem;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0;
+    padding: 0rem;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    max-width: 100%;
+
+}
+nav ul li{
+    width: 100%;
+    max-width: 100%;
+
+}
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(20, 20, 20);
+    border: 1px solid rgb(17, 17, 17);
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+nav ul li a:hover{
+    background-color: rgb(49, 49, 49);
+}
+main p{
+    box-shadow: 0 0 10px 1px black;
+}
+.hero{
+    position: relative;
+    padding-bottom: 2rem;
+}
+.hero p{
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    background-color: rgba(0, 0, 0, 0.712);
+    box-shadow: unset;
+    display: block;
+    width: 80%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.hero img{
+    display: block;
+    min-width: 80%;
+    box-shadow: 0 0 10px 0 white;
+}
+#wfs{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+#wfs h4{
+    padding: 1rem 0;
+}
+#avm{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.836);
+    box-shadow: 0 0 10px 0 red;
+    color: white;
+    margin: auto;
+    max-width: unset;
+    width: 90%;
+    position: absolute;
+    top: auto;
+    left: 5%;
+}
+#vm{
+    display: grid;
+    justify-items: center;
+}
+#visit-button{
+    background-color: white;
+    color: black;
+    padding: 0 2rem;
+    margin-right: .2rem;
+    margin-bottom: 0.2rem;
+    border: 2px solid gray;
+}
+#visit-button:hover{
+    cursor:pointer;
+}
+#recom figcaption, #recom a{
+    position: absolute;
+}
+#recom {
+    position: relative;
+}
+#recom a{
+    bottom: 0%;
+    left: 50%;
+    padding-bottom: .5rem;
+}
+#recom figure{
+    position: relative;
+    overflow: hidden;
+    margin: auto auto;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: pic;
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+    
+}
+#recom figure img{
+    margin: 0;
+    box-shadow: 0 0 3px 2px purple;
+}
+#recom figcaption{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.89);
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+#recom article{
+    display: grid;
+    grid-template-rows: repeat(6, 6rem);
+    grid-template-areas: 
+    "pic type"
+    "pic ep"
+    "pic rat"
+    "pic rank"
+    "pic syn"
+    "pic syn";
+    overflow: hidden;
+    padding: 2rem 0;
+    box-shadow: 0 0 5px 0 grey;
+    border-radius: 15px;
+}
+#ep{
+    grid-area: ep;
+}
+#rat{
+    grid-area: rat;
+}
+#rank{
+    grid-area: rank;
+}
+#syn{
+    grid-area: syn;
+}
+#rankingtn{
+    display: grid;
+    font-size: 3rem;
+    grid-template-areas: 
+    "ima tp"
+    "ima tp"
+    "ima tp";
+}
+#rankingtn ul{
+    grid-area: tp;
+    list-style: none;
+    height: fit-content;
+    margin: auto;
+    width: 100%;
+}
+#rankingtn ul li{
+    padding: 1rem;
+    text-align: center;
+}
+#rankingtn img{
+    grid-area: ima;
+    box-shadow: 0 0 10px 0 yellow;
+}
+#seasonal-anime{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.cards{
+    display: grid;
+    padding: 1rem;
+}
+.cards img{
+    box-shadow: 0 0 10px 0 white;
+}
+.cards p{
+    box-shadow: unset;
+    text-align: center;
+}
+#wsh{
+    text-align: center;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    color: black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 0 10px 0 white;
+    display: flex;
+	justify-content: center;
+	padding: 20px;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 2rem;
+}
+footer img{
+    max-width: 3rem;
+}
