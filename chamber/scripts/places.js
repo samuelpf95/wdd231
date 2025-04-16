@@ -28,6 +28,12 @@ const displayPlaces = (places) => {
 		address.textContent = `${place.address}`;
         btn.title = `Learn More`;
         btn.textContent = `Learn More`;
+		btn.addEventListener("click", () => {
+			const dialog = document.getElementById("infoDialog");
+			const dialogText = document.getElementById("dialogText");
+			dialogText.textContent = `The cost for ${place.name} is ${place.cost}`;
+			dialog.showModal();
+		});	
 		img.setAttribute("src", `images/${place.image_url}`);
 		img.setAttribute("alt", `${place.name} Picture`);
 		img.setAttribute("loading", "lazy");
