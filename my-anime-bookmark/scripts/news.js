@@ -14,11 +14,13 @@ async function loadCurrentSeasonAnime() {
       animeList.forEach(anime => {
         const section = document.createElement("section");
         section.classList.add("cards");
+  
         const image = anime.images.jpg.image_url;
         const title = anime.title;
         const rating = anime.score ?? "N/A";
         const rank = anime.rank ?? "N/A";
         const genres = anime.genres.map(g => g.name).join(", ");
+        const url = anime.url;
   
         section.innerHTML = `
           <img src="${image}" alt="${title}" width="200">
@@ -26,6 +28,7 @@ async function loadCurrentSeasonAnime() {
           <p><strong>Rating:</strong> ${rating}</p>
           <p><strong>Ranking:</strong> ${rank}</p>
           <p><strong>Géneros:</strong> ${genres}</p>
+          <a href="${url}" target="_blank">More information</a>
         `;
   
         container.appendChild(section);

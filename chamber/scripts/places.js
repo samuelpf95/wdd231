@@ -53,5 +53,3 @@ const displayPlaces = (places) => {
 		cards.appendChild(card);
 	});
 };
-
-displayPlaces(places);

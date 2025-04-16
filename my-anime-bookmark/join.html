@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site Plan of wdd 231 project ">
+    <link rel="stylesheet" href="/my-anime-bookmark/styles/small.css">
+    <link rel="stylesheet" href="/my-anime-bookmark/styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script src="scripts/news.js" defer></script>
+    <script src="scripts/ranking.js" defer></script>
+    <script src="scripts/recommendation.js" defer></script>
+    <link rel="icon" href="images/favicon.ico">
+    <title>MyAnimeBookMark | Site Plan | Samuel Pacheco | wdd231</title>
+</head>
+<body>
+    <header>
+        <div class="upper">
+            <img src="images/logo.webp" alt="logo">
+            <p>My Anime BookMark <br> Daily anime feed</p>
+        </div>
+        <button id="hamburger"><span></span></button>
+    </header>
+    <nav>
+    <ul>
+        <li><a href="home.html" >Home</a></li>
+        <li><a href="news.html" >News</a></li>
+        <li><a href="#"class="alink">Join</a></li>
+    </ul>
+    </nav>
+    <main class="MainJoin">
+        <h1 id="regj">Registration</h1>
+        <form method="get" action="../chamber/thankyou.html" class="mainform">
+            <fieldset>
+                    <label>
+                    First Name:
+                    <input 
+                      type="text" 
+                      name="firstName" 
+                      title="Please enter your first name" 
+                      required 
+                      autocomplete="given-name">
+                    </label>
+                  
+                    <label>
+                    Last Name:
+                    <input 
+                      type="text" 
+                      name="lastName" 
+                      title="Please enter your last name" 
+                      required 
+                      autocomplete="family-name">
+                    </label>
+                  
+                    <label>
+                    Title Within Organization:
+                    <input 
+                      type="text" 
+                      name="orgTitle" 
+                      title="Enter your organizational title (letters, hyphens, spaces only, min 7 characters)" 
+                      autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    </label>                   
+                    <label>
+                    Email Address:
+                    <input 
+                      type="email" 
+                      name="email" 
+                      title="Please enter your email address" 
+                      required 
+                      autocomplete="email" 
+                      placeholder="example@example.com">
+                  </label>
+                  
+                  <label>
+                    Mobile Phone Number:
+                    <input 
+                      type="tel" 
+                      name="mobilePhone" 
+                      title="Please enter your mobile phone number" 
+                      required 
+                      autocomplete="tel">
+                  </label>
+                  
+                  <label>
+                    Organization Name:
+                    <input 
+                      type="text" 
+                      name="organization" 
+                      title="Enter your business or organization name" 
+                      required 
+                      autocomplete="organization">
+                  </label>
+                <h3>Membership level:</h3>
+                    <label class="rinp"><input type="radio" name="mlevel" value="np" checked>Membership for non profit organizations</label>
+                    <label class="rinp"><input type="radio" name="mlevel" value="bronze"> Bronze Membership</label>
+                    <label class="rinp"><input type="radio" name="mlevel" value="silver"> Silver Membership</label>
+                    <label class="rinp"><input type="radio" name="mlevel" value="gold"> Gold Membership</label>
+                <h3>Business/organization's description:</h3>
+                <label>
+                    <textarea name="description" id="desc" placeholder="Business/organization's description"></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp">
+            </fieldset>
+            <label><input aria-label="Start Application" type="submit" value="Start Application" id="submit"></label>
+        </form>
+        <div class="details">
+            <h2>Membership levels</h2>
+            <section id="m0">
+                <h4>Non Profit Membership Level</h4>
+                <button aria-label="Learn More" id="Learn0">Learn More</button>
+            </section>
+            <section id="m1">
+                <h4>Bronze Membership Level</h4>
+                <button aria-label="Learn More" id="Learn1">Learn More</button>
+            </section>
+            <section id="m2">
+                <h4>Silver Membership Level</h4>
+                <button aria-label="Learn More" id="Learn2">Learn More</button>
+            </section>
+            <section id="m3">
+                <h4>Gold Membership Level</h4>
+                <button aria-label="Learn More" id="Learn3">Learn More</button>
+            </section>
+            <dialog id="infoDialog">
+                <p id="dialogMsg">Placeholder message</p>
+                <button aria-label="Close" id="closeDialog">Close</button>
+            </dialog>
+        </div>
+        <h2>Random recommendation!</h2>
+        <div id="recom"></div>
+    </main>
+    <footer>
+        <p>Follow us in our social media!</p>
+        <div>
+            <a href="http://www.fb.com"><img src="images/facebook_icon.png" alt="Youtube"></a>
+            <a href="http://www.x.com"><img src="images/x_icon.png" alt="Twitter"></a>
+            <a href="http://www.instagram.com"><img src="images/instagram_icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>
