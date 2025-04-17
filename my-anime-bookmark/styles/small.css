@@ -127,11 +127,15 @@ main{
 
 }
 .hero{
-    max-width: 80%;
+    max-width: 100%;
 }
 .hero img{
     display: block;
-    box-shadow: 0 0 10px 0 white;}
+    box-shadow: 0 0 10px 0 white;
+}
+.hero p{
+    padding: 2rem 1rem;
+}
 #wfs{
     padding: 1rem 0;
     display: flex;
