@@ -11,6 +11,6 @@ result.innerHTML = `
   <p>Your email: ${params.get('email')}</p>
   <p>Password: ${params.get('password')}</p>
   <p>Favorite Anime: ${params.get('confirmPassword')}</p>
-  <p>Donation: ${donation}</p>
+  <p>Donation: ${donation} Thank you!</p>
   <p>Submitted on: ${params.get('timestamp')}</p>
 `;
