@@ -12,5 +12,4 @@ result.innerHTML = `
   <p>Password: ${params.get('password')}</p>
   <p>Favorite Anime: ${params.get('confirmPassword')}</p>
   <p>Donation: ${donation} Thank you!</p>
-  <p>Submitted on: ${params.get('timestamp')}</p>
-`;
+  <p>Submitted on: ${new Date(params.get('timestamp')).toLocaleString('en-US', { dateStyle: 'long', timeStyle: 'short' })}</p>`;
