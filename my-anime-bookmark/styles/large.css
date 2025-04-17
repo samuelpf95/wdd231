@@ -1,4 +1,7 @@
 @media (min-width: 320px){
+    *{
+        max-width: 98%;
+    }
     nav ul{
         display: flex;
         flex-direction: row;
@@ -8,6 +11,37 @@
         margin: auto;
         text-align: center;
     }
+    #rankingtn{
+        display: grid;
+        font-size: 3rem;
+        grid-template-areas: 
+        "ima tp"
+        "ima tp"
+        "ima tp";
+    }
+    #recom{
+        margin: 0;
+        width: 100%;
+    }
+    #ep{
+        grid-area: ep;
+    }
+    #rat{
+        grid-area: rat;
+    }
+    #rank{
+        grid-area: rank;
+    }
+    #syn{
+        grid-area: syn;
+    }
+    #rankingtn{
+        display: grid;
+        grid-template-areas: 
+    "ima tp"
+    "ima tp"
+    "ima tp";
+}    
     nav ul li a{
         display: inline;
         text-decoration: none;
@@ -39,5 +73,130 @@
     #hamburger{
         display: none;
     }
-    
+    .hero{
+        position: relative;
+        padding-bottom: 2rem;
+    }
+    .hero p{
+        position: absolute;
+        top: 70%;
+        left: 10%;
+        background-color: rgba(0, 0, 0, 0.712);
+        box-shadow: unset;
+        display: block;
+        width: 80%;
+        text-align: center;
+        font-size: 2rem;
+        padding: 1rem 0;
+    }
+    #recom figcaption, #recom a{
+        position: absolute;
+    }
+    #recom {
+        position: relative;
+    }
+    #recom a{
+        bottom: 0%;
+        left: 50%;
+        padding-bottom: .5rem;
+    }
+    #recom figure{
+        position: relative;
+        overflow: hidden;
+        margin: auto auto;
+        min-width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: pic;
+        max-height: 100%;
+        max-width: 100%;
+        margin: auto;
+        padding-left: 1rem;
+    }
+    #recom figure img{
+        margin: 0;
+        box-shadow: 0 0 3px 2px purple;
+    }
+    #recom figcaption{
+        display: block;
+        background-color: rgba(0, 0, 0, 0.89);
+        bottom: 0;
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+    }
+    #recom article{
+        display: grid;
+        grid-template-rows: repeat(6, 6rem);
+        grid-template-areas: 
+        "pic type"
+        "pic ep"
+        "pic rat"
+        "pic rank"
+        "pic syn"
+        "pic syn";
+        overflow: hidden;
+        padding: 2rem 0;
+        box-shadow: 0 0 5px 0 grey;
+        border-radius: 15px;
+    }
+    main{
+        margin: auto;
+    }
+    nav.closed{
+        display: flex !important;
+    }
+    nav.open{
+        display: flex;
+    }
+    nav{
+        margin-top: 1rem;
+        display: flex;
+        animation: none;
+        opacity: 1;
+    }
+    #syn{padding: unset;}
+    @keyframes slideDown {
+        from {
+            transform: translateY(0);
+            opacity: 1;
+          }
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+    }
+    @keyframes slideUp{
+        from {
+            transform: translateY(0);
+            opacity: 1;
+          }
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+    }
+    form{
+        display: grid;
+        grid-template-areas: 
+        "fieldset title"
+        "fieldset donation"
+        "button button";
+        gap: 1rem;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    #donation{
+        grid-area: donation;
+    }
+    form h2{
+        grid-area: title;
+    }
+    form fieldset{
+        grid-area: fieldset;
+    }
+    #donation + label{
+        grid-area: button;
+    }
 }

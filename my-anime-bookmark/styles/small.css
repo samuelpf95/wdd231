@@ -1,6 +1,8 @@
 *{
-    max-width: 98%;
+    max-width: 100%;
     margin: auto;
+}
+* p, * a, * span, .upper *, label, ul{
     font-style: normal;
     font-family: "Josefin Sans", sans-serif;
 }
@@ -13,21 +15,28 @@ header{
     margin-bottom: 2rem;
     box-shadow: 0 0 10px 0 white;
 }
+nav{
+    max-width: 90%;
+}
 #hamburger span::before{
     content: "\2630";
     font-size: 2rem;
 }
-#hamburger.open span::before{
+ul{
+    padding: 0;
+}
+#hamburger.closedb span::before{
     content: "X";
 }
 #hamburger{
     width: 44px;
     height: 44px;
-    background-color: transparent;
+    background-color: white;
     border: none;
     position: absolute;
-    top: 2%;
-    left: 80%;
+    top: 9%;
+    left: 10%;
+    border-radius: 15px;
 }
 #hamburger:hover{
     cursor: pointer;
@@ -52,7 +61,7 @@ header{
 }
 .upper img{
     width: 5rem;
-    height: auto;
+    max-height: 5rem;
     border-right: 1px solid black;
     padding-right: .5rem;
 }
@@ -68,6 +77,8 @@ nav{
 }
 h1, h2, h3, h4{
     padding: 1rem;
+    font-style: normal;
+    font-family: "Josefin Sans", sans-serif;
 }
 nav ul{
     display: grid;
@@ -80,6 +91,9 @@ nav ul{
     margin: 0;
     max-width: 100%;
 
+}
+nav.closed{
+    display: none;
 }
 nav ul li{
     width: 100%;
@@ -103,27 +117,18 @@ nav ul li a:hover{
 main p{
     box-shadow: 0 0 10px 1px black;
 }
-.hero{
-    position: relative;
-    padding-bottom: 2rem;
+main{
+    display: grid;
+    max-width: 80%;
+    margin: 0;
+
 }
-.hero p{
-    position: absolute;
-    top: 70%;
-    left: 10%;
-    background-color: rgba(0, 0, 0, 0.712);
-    box-shadow: unset;
-    display: block;
-    width: 80%;
-    text-align: center;
-    font-size: 2rem;
-    padding: 1rem 0;
+.hero{
+    max-width: 80%;
 }
 .hero img{
     display: block;
-    min-width: 80%;
-    box-shadow: 0 0 10px 0 white;
-}
+    box-shadow: 0 0 10px 0 white;}
 #wfs{
     padding: 1rem 0;
     display: flex;
@@ -143,7 +148,13 @@ main p{
     position: absolute;
     top: auto;
     left: 5%;
+    animation: slideDown 0.5s ease forwards;
+    transform: translateY(-100%);
+    opacity: 0;
 }
+#avm.hidden {
+    animation: slideUp 0.5s ease forwards;
+  }
 #vm{
     display: grid;
     justify-items: center;
@@ -159,57 +170,9 @@ main p{
 #visit-button:hover{
     cursor:pointer;
 }
-#recom figcaption, #recom a{
-    position: absolute;
-}
-#recom {
-    position: relative;
-}
-#recom a{
-    bottom: 0%;
-    left: 50%;
-    padding-bottom: .5rem;
-}
-#recom figure{
-    position: relative;
-    overflow: hidden;
-    margin: auto auto;
-    min-width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: pic;
-    max-height: 100%;
-    max-width: 100%;
-    margin: auto;
-    padding-left: 1rem;
-}
-#recom figure img{
-    margin: 0;
-    box-shadow: 0 0 3px 2px purple;
-}
-#recom figcaption{
-    display: block;
-    background-color: rgba(0, 0, 0, 0.89);
-    bottom: 0;
-    width: 100%;
-    max-width: 100%;
-    text-align: left;
-}
 #recom article{
-    display: grid;
-    grid-template-rows: repeat(6, 6rem);
-    grid-template-areas: 
-    "pic type"
-    "pic ep"
-    "pic rat"
-    "pic rank"
-    "pic syn"
-    "pic syn";
-    overflow: hidden;
-    padding: 2rem 0;
-    box-shadow: 0 0 5px 0 grey;
-    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
 }
 #ep{
     grid-area: ep;
@@ -222,14 +185,10 @@ main p{
 }
 #syn{
     grid-area: syn;
+    padding:.5rem;
 }
 #rankingtn{
-    display: grid;
     font-size: 3rem;
-    grid-template-areas: 
-    "ima tp"
-    "ima tp"
-    "ima tp";
 }
 #rankingtn ul{
     grid-area: tp;
@@ -267,6 +226,147 @@ main p{
 #wsh{
     text-align: center;
 }
+.MainJoin{
+    margin: auto;
+    max-width: 90%;
+}
+#regj, .MainJoin h2{
+    margin: auto;
+    padding: 1rem 0;
+}
+.mainform label input{
+    margin-bottom: .5rem;
+    width: 100%;
+}
+.mainform fieldset{
+    display: grid;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+.mainform fieldset label{
+    display: grid;
+    width: 100%;
+}
+.mainform textarea{
+    width: 100%;
+    min-height: 80px;
+}
+#submit, .info-btn{
+    padding: .5rem;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 2rem;
+    font-weight: bold;
+    box-shadow: 0 0 10px 0 white;
+    border: 1px solid rgb(173, 173, 173);
+    margin-top: 1rem;
+}
+#submit:hover, .info-btn:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px white;
+}
+button:active{
+    background-color: rgb(190, 190, 190);
+}
+#donation{
+    padding: 1rem 0;
+}
+#donation label{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    padding: .5rem 0;
+}
+#quantityText {
+    grid-column: 1/-1;
+    width: 90%;
+}
+#results {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    width: 80%;
+    max-width: 600px;
+    margin: 2rem auto;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0  0 4px 8px rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+}
+#results p{
+    box-shadow: unset;
+}
+dialog {
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+#close-dialog {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+@keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+
+  nav {
+    animation: slideDown 0.5s ease-out forwards;
+    transform: translateY(-100%);
+    opacity: 0;
+    display: block;
+  }
+  
+  nav.open {
+    animation: slideDown 0.5s ease-out forwards;
+  }
+  
+  nav.closed {
+    animation: slideUp 0.5s ease-in forwards;
+  }
+  dialog[open] {
+    animation: slideDown 0.5s ease forwards;
+  }
+  
+  dialog.closing {
+    animation: slideUp 0.5s ease forwards;
+  }
 footer{
     display: flex;
     flex-direction: column;

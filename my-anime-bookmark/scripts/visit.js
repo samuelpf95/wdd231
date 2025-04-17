@@ -19,4 +19,11 @@ if (!lastVisit) {
         visitMessage.textContent = `You last visited ${differenceInDays} ${dayText} ago.`;
     }
 }
+visitButton.addEventListener("click", () => {
+    const avm = document.getElementById("avm");
+    avm.classList.add("hidden");
+    setTimeout(() => {
+      avm.style.display = "none";
+    }, 500);
+  });
     localStorage.setItem(lastVisitKey, currentTime);

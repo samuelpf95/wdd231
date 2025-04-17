@@ -10,11 +10,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <script src="scripts/news.js" defer></script>
-    <script src="scripts/ranking.js" defer></script>
     <script src="scripts/recommendation.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
     <link rel="icon" href="images/favicon.ico">
     <title>MyAnimeBookMark | Site Plan | Samuel Pacheco | wdd231</title>
 </head>
+<dialog id="anime-dialog">
+    <div id="dialog-content">
+      <button id="close-dialog">✖</button>
+      <img id="dialog-image" src="" alt="" width="250">
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-synopsis"></p>
+      <a id="dialog-link" href="#" target="_blank">More information</a>
+    </div>
+  </dialog>
 <body>
     <header>
         <div class="upper">
@@ -23,7 +32,7 @@
         </div>
         <button id="hamburger"><span></span></button>
     </header>
-    <nav>
+    <nav class="closed">
     <ul>
         <li><a href="home.html" >Home</a></li>
         <li><a href="#" class="alink">News</a></li>
@@ -43,9 +52,9 @@
         <footer>
             <p>Follow us in our social media!</p>
             <div>
-                <a href="http://www.fb.com"><img src="images/facebook_icon.png" alt="Youtube"></a>
-                <a href="http://www.x.com"><img src="images/x_icon.png" alt="Twitter"></a>
-                <a href="http://www.instagram.com"><img src="images/instagram_icon.png" alt="Instagram"></a>
+                <a href="http://www.fb.com"><img src="images/facebook_icon.png" alt="Youtube" loading="lazy"></a>
+                <a href="http://www.x.com"><img src="images/x_icon.png" alt="Twitter" loading="lazy"></a>
+                <a href="http://www.instagram.com"><img src="images/instagram_icon.png" alt="Instagram" loading="lazy"></a>
             </div>
         </footer>
     </body>

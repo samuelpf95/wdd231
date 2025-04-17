@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <script src="scripts/news.js" defer></script>
-    <script src="scripts/ranking.js" defer></script>
+    <script src="scripts/join.js" defer></script>
     <script src="scripts/recommendation.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
     <link rel="icon" href="images/favicon.ico">
     <title>MyAnimeBookMark | Site Plan | Samuel Pacheco | wdd231</title>
 </head>
@@ -23,8 +23,8 @@
         </div>
         <button id="hamburger"><span></span></button>
     </header>
-    <nav>
-    <ul>
+    <nav class="closed">
+        <ul>
         <li><a href="home.html" >Home</a></li>
         <li><a href="news.html" >News</a></li>
         <li><a href="#"class="alink">Join</a></li>
@@ -32,7 +32,7 @@
     </nav>
     <main class="MainJoin">
         <h1 id="regj">Registration</h1>
-        <form method="get" action="../chamber/thankyou.html" class="mainform">
+        <form method="get" action="../my-anime-bookmark/thankyou.html" class="mainform">
             <fieldset>
                     <label>
                     First Name:
@@ -55,12 +55,13 @@
                     </label>
                   
                     <label>
-                    Title Within Organization:
+                    Nickname (Showing name):
                     <input 
                       type="text" 
-                      name="orgTitle" 
-                      title="Enter your organizational title (letters, hyphens, spaces only, min 7 characters)" 
-                      autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                      name="Nickname" 
+                      title="Please nter your nickname" 
+                      required
+                      autocomplete="nickname">
                     </label>                   
                     <label>
                     Email Address:
@@ -74,69 +75,47 @@
                   </label>
                   
                   <label>
-                    Mobile Phone Number:
+                    Password:
                     <input 
-                      type="tel" 
-                      name="mobilePhone" 
-                      title="Please enter your mobile phone number" 
+                      type="password" 
+                      id="password"
+                      name="password" 
+                      title="Please enter your password (letters, hyphens, spaces only, min 8 characters)" 
                       required 
-                      autocomplete="tel">
+                      pattern="[A-Za-z\s\-]{8,}">
                   </label>
                   
                   <label>
-                    Organization Name:
+                    Favorite Anime
                     <input 
                       type="text" 
-                      name="organization" 
-                      title="Enter your business or organization name" 
-                      required 
-                      autocomplete="organization">
+                      id="confirmPassword"
+                      name="confirmPassword" 
+                      required>
                   </label>
-                <h3>Membership level:</h3>
-                    <label class="rinp"><input type="radio" name="mlevel" value="np" checked>Membership for non profit organizations</label>
-                    <label class="rinp"><input type="radio" name="mlevel" value="bronze"> Bronze Membership</label>
-                    <label class="rinp"><input type="radio" name="mlevel" value="silver"> Silver Membership</label>
-                    <label class="rinp"><input type="radio" name="mlevel" value="gold"> Gold Membership</label>
-                <h3>Business/organization's description:</h3>
-                <label>
-                    <textarea name="description" id="desc" placeholder="Business/organization's description"></textarea>
-                </label>
-                <input type="hidden" name="timestamp" id="timestamp">
-            </fieldset>
-            <label><input aria-label="Start Application" type="submit" value="Start Application" id="submit"></label>
+                  <input type="hidden" name="timestamp" id="timestamp">
+                </fieldset>
+                <h2>Donation</h2>
+                <fieldset id="donation">
+                    <label class="rinp"><input type="radio" name="donation" value="none :C" checked> Nothing, create my account only</label>
+                    <label class="rinp"><input type="radio" name="donation" value="$5"> $5. Thank you!</label>
+                    <label class="rinp"><input type="radio" name="donation" value="$10"> $10. Thank you!</label>
+                    <label class="rinp">
+                      <input type="radio" name="donation" value="other"> Other:
+                      <input type="number" id="quantityText" step="0.01" inputmode="decimal" disabled>
+                    </label>
+                  </fieldset>
+            <label><input aria-label="Create Account" type="submit" value="Create Account" id="submit"></label>
         </form>
-        <div class="details">
-            <h2>Membership levels</h2>
-            <section id="m0">
-                <h4>Non Profit Membership Level</h4>
-                <button aria-label="Learn More" id="Learn0">Learn More</button>
-            </section>
-            <section id="m1">
-                <h4>Bronze Membership Level</h4>
-                <button aria-label="Learn More" id="Learn1">Learn More</button>
-            </section>
-            <section id="m2">
-                <h4>Silver Membership Level</h4>
-                <button aria-label="Learn More" id="Learn2">Learn More</button>
-            </section>
-            <section id="m3">
-                <h4>Gold Membership Level</h4>
-                <button aria-label="Learn More" id="Learn3">Learn More</button>
-            </section>
-            <dialog id="infoDialog">
-                <p id="dialogMsg">Placeholder message</p>
-                <button aria-label="Close" id="closeDialog">Close</button>
-            </dialog>
-        </div>
         <h2>Random recommendation!</h2>
         <div id="recom"></div>
     </main>
     <footer>
         <p>Follow us in our social media!</p>
         <div>
-            <a href="http://www.fb.com"><img src="images/facebook_icon.png" alt="Youtube"></a>
-            <a href="http://www.x.com"><img src="images/x_icon.png" alt="Twitter"></a>
-            <a href="http://www.instagram.com"><img src="images/instagram_icon.png" alt="Instagram"></a>
+            <a href="http://www.fb.com"><img src="images/facebook_icon.png" alt="Youtube" loading="lazy"></a>
+            <a href="http://www.x.com"><img src="images/x_icon.png" alt="Twitter" loading="lazy"></a>
+            <a href="http://www.instagram.com"><img src="images/instagram_icon.png" alt="Instagram" loading="lazy"></a>
         </div>
     </footer>
 </body>
