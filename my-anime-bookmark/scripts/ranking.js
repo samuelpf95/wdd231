@@ -6,9 +6,9 @@ async function showTopThreeAnimes() {
     if (!response.ok) throw new Error("Error fetching top animes");
 
     const data = await response.json();
-    const top3 = data.data.slice(0, 3); // Top 3 animes
+    const top3 = data.data.slice(0, 3);
 
-    // Crear lista de los 3 mejores
+
     const list = document.createElement('ul');
     top3.forEach((anime, index) => {
       const li = document.createElement('li');
@@ -16,9 +16,9 @@ async function showTopThreeAnimes() {
       list.appendChild(li);
     });
 
-    // Agregar la lista y la imagen del primero al div
+  
     const div = document.getElementById('rankingtn');
-    div.innerHTML = ''; // Limpiar si ya tenía contenido
+    div.innerHTML = '';
     div.appendChild(list);
 
     const img = document.createElement('img');

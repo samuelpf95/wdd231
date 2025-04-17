@@ -2,6 +2,9 @@
     max-width: 100%;
     margin: auto;
 }
+article p, #rankingtn ul{
+    background-color: black;
+}
 * p, * a, * span, .upper *, label, ul{
     font-style: normal;
     font-family: "Josefin Sans", sans-serif;
